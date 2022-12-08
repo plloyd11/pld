@@ -1,0 +1,63 @@
+import { ArticleLayout } from '@/components/ArticleLayout'
+
+export const meta = {
+  author: 'Peter Lloyd',
+  date: '2022-12-01',
+  title: 'What exactly are design tokens?',
+  description:
+    'Learn about the fundamental building blocks of a design system: design tokens. They are the visual and functional standards that define the way a brand looks and behaves across all of its digital products.',
+}
+
+export default (props) => <ArticleLayout meta={meta} {...props} />
+
+Design tokens are the fundamental building blocks of a design system. They are the visual and functional standards that define the way a brand looks and behaves across all of its digital products. In other words, design tokens are the DNA of a design system, providing consistency and coherence to a brand's digital presence.
+
+Design tokens provide a common language for designers and developers to communicate and collaborate on the design of a digital product. For example, a design token for a button might specify the button's background color, font, and hover effect. This allows designers and developers to use the same terminology when discussing the design of a button, ensuring that they are on the same page and that the end product is consistent with the brand's visual identity.
+
+In addition to providing consistency, design tokens also help to streamline the design and development process. By defining the visual and functional characteristics of common elements such as buttons, fonts, and colors in a design system, designers and developers can focus on creating innovative and engaging user experiences, rather than spending time on tedious tasks such as selecting and implementing individual design elements. This can save time and resources, allowing the team to create a higher quality product in less time.
+
+Design tokens are often represented in code as variables or constants that can be referenced and used throughout the codebase. For example, a design token for a button's background color might be defined as a hexadecimal color code, such as #0066cc, and used in the code like this:
+
+```js
+const BUTTON_BACKGROUND_COLOR = "#0066cc";
+
+function renderButton() {
+  // Create the button element
+  let button = document.createElement("button");
+
+  // Set the button's background color using the design token
+  button.style.backgroundColor = BUTTON_BACKGROUND_COLOR;
+
+  // Other button styles and functionality can be added here...
+
+  // Return the button element
+  return button;
+}
+```
+
+In this example, the BUTTON_BACKGROUND_COLOR design token is defined as a constant and then used to set the background color of a button element. This allows the color to be easily changed in a single location (the design token) rather than having to update it in multiple places throughout the code.
+
+Additionally, design tokens can be stored in a separate file and imported into the code where they are needed. This allows for even greater flexibility and reuse of the design tokens, as well as making it easier to manage and update them. For example:
+
+```js
+// Import the design tokens from a separate file
+import { BUTTON_BACKGROUND_COLOR } from "./design-tokens.js";
+
+function renderButton() {
+  // Create the button element
+  let button = document.createElement("button");
+
+  // Set the button's background color using the design token
+  button.style.backgroundColor = BUTTON_BACKGROUND_COLOR;
+
+  // Other button styles and functionality can be added here...
+
+  // Return the button element
+  return button;
+}
+```
+In this example, the BUTTON_BACKGROUND_COLOR design token is imported from a separate file and then used in the same way as in the previous example. This allows the design token to be easily shared and used across multiple components and modules in the codebase.
+
+Furthermore, design tokens are essential for maintaining the integrity of a design system over time. As a brand evolves and its digital products are updated and expanded, design tokens provide a way to ensure that the changes are made consistently across the entire system. This ensures that the brand remains cohesive and recognizable, even as it grows and changes. For example, if a brand decides to update its primary color from blue to green, a design token can be used to quickly and easily update the color across all of the brand's digital products, ensuring that the change is made consistently and without introducing any inconsistencies.
+
+In conclusion, design tokens are an essential component of a design system, providing the foundation for a consistent and cohesive brand experience across all digital products. They provide a common language for designers and developers to communicate and collaborate, streamline the design and development process, and maintain the integrity of a design system over time. By using design tokens, brands can create digital products that are visually consistent, functionally cohesive, and intuitive for users.
