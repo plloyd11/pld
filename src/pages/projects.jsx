@@ -69,15 +69,15 @@ export default function Projects() {
   return (
     <>
       <Head>
-        <title>Projects - Spencer Sharp</title>
+        <title>Projects - Peter Lloyd</title>
         <meta
           name="description"
-          content="Things I’ve made trying to put my dent in the universe."
+          content="Some of my favorite projects I've worked on over the years."
         />
       </Head>
       <SimpleLayout
-        title="Things I’ve made trying to put my dent in the universe."
-        intro="I’ve worked on tons of little projects over the years but these are the ones that I’m most proud of. Many of them are open-source, so if you see something that piques your interest, check out the code and contribute if you have ideas for how it can be improved."
+        title="Some of my favorite projects I've worked on over the years."
+        intro="As a solo contractor, I have had the privilege of working with some amazing clients over the years. Each project has been a unique and rewarding challenge, and I am grateful for the opportunity to contribute to my clients' success. On this page, you will find a selection of my past client projects, each one a testament to my dedication and expertise. Thank you for considering me for your next project."
       >
         <ul
           role="list"
