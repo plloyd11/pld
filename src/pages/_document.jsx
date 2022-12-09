@@ -56,6 +56,11 @@ export default function Document() {
           href="https://fonts.googleapis.com/css2?family=Fira+Sans:wght@300;400;600;700&display=swap"
           rel="stylesheet"
         />
+        <script
+          defer
+          data-domain="peterlloyd.digital"
+          src="https://plausible.io/js/script.js"
+        ></script>
       </Head>
       <body className="flex flex-col h-full bg-zinc-50 dark:bg-black">
         <Main />
