@@ -12,6 +12,7 @@ import {
   GitHubIcon,
   LinkedInIcon,
 } from '@/components/SocialIcons'
+import { ChevronRightIcon } from '@heroicons/react/24/solid'
 import image1 from '@/images/photos/image-1.jpg'
 import image2 from '@/images/photos/image-2.jpg'
 import image3 from '@/images/photos/image-3.jpg'
@@ -149,8 +150,8 @@ function Resume() {
       },
     },
     {
-      company: 'Freelancer',
-      title: 'Web Design + Development',
+      company: 'Sole Proprietor',
+      title: 'Design + Development',
       logo: logoObservatory,
       start: '2017',
       end: {
@@ -261,10 +262,27 @@ export default function Home({ articles }) {
       </Head>
       <Container className="mt-9">
         <div className="max-w-2xl">
+          <div className="my-8">
+            <a
+              href="https://app.hellobonsai.com/u/observatory/bc70f65f-cc46-4869-9171-b7110b0e5b27"
+              className="inline-flex items-center p-1 pr-2 text-white bg-black rounded-full hover:text-gray-200 sm:text-base lg:text-sm xl:text-base"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              <span className="rounded-full bg-gradient-to-r from-yellow-500 to-nightAccent px-3 py-0.5 text-sm font-semibold leading-5 text-dayText">
+                Currently accepting new clients
+              </span>
+              <span className="ml-4 text-sm">Let&apos;s chat</span>
+              <ChevronRightIcon
+                className="w-5 h-5 ml-2 text-gray-500"
+                aria-hidden="true"
+              />
+            </a>
+          </div>
           <h1 className="text-4xl font-bold tracking-tight text-zinc-800 dark:text-zinc-100 sm:text-5xl">
             Front-End Developer · UI/UX Designer · Photographer
           </h1>
-          <p className="mt-6 text-base text-zinc-600 dark:text-zinc-400">
+          <p className="mt-6 text-lg text-zinc-600 dark:text-zinc-400">
             I’m Peter, a web developer &amp; designer living in Ithaca, New
             York. I design and code beautifully simple websites. I take
             photographs and play guitar. I love what I do.

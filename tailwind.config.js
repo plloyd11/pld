@@ -4,6 +4,14 @@ module.exports = {
   darkMode: 'class',
   plugins: [require('@tailwindcss/typography')],
   theme: {
+    extend: {
+      colors: {
+        dayText: '#011627',
+        dayAccent: '#528E63',
+        nightText: '#d6deeb',
+        nightAccent: '#FFD700',
+      },
+    },
     fontSize: {
       xs: ['0.8125rem', { lineHeight: '1.5rem' }],
       sm: ['0.875rem', { lineHeight: '1.5rem' }],
@@ -66,7 +74,7 @@ module.exports = {
           '--tw-prose-th-borders': theme('colors.zinc.200'),
           '--tw-prose-td-borders': theme('colors.zinc.100'),
 
-          '--tw-prose-invert-body': theme('colors.zinc.400'),
+          '--tw-prose-invert-body': '#d6deeb',
           '--tw-prose-invert-headings': theme('colors.zinc.200'),
           '--tw-prose-invert-links': theme('colors.teal.400'),
           '--tw-prose-invert-links-hover': theme('colors.teal.400'),

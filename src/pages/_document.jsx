@@ -62,7 +62,7 @@ export default function Document() {
           src="https://plausible.io/js/script.js"
         ></script>
       </Head>
-      <body className="flex flex-col h-full bg-zinc-50 dark:bg-black">
+      <body className="flex h-full flex-col bg-zinc-50 dark:bg-[#010B14]">
         <Main />
         <NextScript />
       </body>

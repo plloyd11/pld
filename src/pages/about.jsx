@@ -17,9 +17,9 @@ function SocialLink({ className, href, children, icon: Icon }) {
     <li className={clsx(className, 'flex')}>
       <Link
         href={href}
-        className="flex text-sm font-medium transition group text-zinc-800 hover:text-teal-500 dark:text-zinc-200 dark:hover:text-teal-500"
+        className="flex text-sm font-medium transition group text-zinc-800 hover:text-nightAccent dark:text-zinc-200 dark:hover:text-nightAccent"
       >
-        <Icon className="flex-none w-6 h-6 transition fill-zinc-500 group-hover:fill-teal-500" />
+        <Icon className="flex-none w-6 h-6 transition fill-zinc-500 group-hover:fill-nightAccent" />
         <span className="ml-4">{children}</span>
       </Link>
     </li>
@@ -61,37 +61,47 @@ export default function About() {
           </div>
           <div className="lg:order-first lg:row-span-2">
             <h1 className="text-4xl font-bold tracking-tight text-zinc-800 dark:text-zinc-100 sm:text-5xl">
-              I’m Peter Lloyd. I live in Ithaca, New York, where I design for
-              the future of MongoDB.
+              I’m Peter Lloyd. I live in Ithaca, New York, where I design and
+              code beautiful websites.
             </h1>
-            <div className="mt-6 text-base space-y-7 text-zinc-600 dark:text-zinc-400">
+            <div className="mt-6 text-base space-y-7 text-zinc-600 dark:text-nightText">
               <p>
-                My name is Peter and I am a designer and developer with a decade
-                of experience in the industry. I have a Bachelor&apos;s degree
-                in Psychology from Rutgers University and have worked on a wide
-                range of projects, from website design and development to
-                branding and marketing materials.
+                As a web developer with nine years of professional experience, I
+                have a strong foundation in front-end development and am skilled
+                in a range of programming languages and technologies. I am
+                proficient in HTML, CSS, and JavaScript, and have a deep
+                understanding of user experience and user interface design. I am
+                committed to creating websites and applications that are not
+                only visually appealing, but also intuitive and easy to use.
               </p>
               <p>
-                In addition to my professional experience, I am also a skilled
-                musician and photographer. I have been playing guitar for over
-                22 years and have a deep love for music. In my photography, I
-                enjoy capturing candid moments and natural beauty, often
-                incorporating elements of design and composition into my images.
+                Throughout my career, I have had the opportunity to work on a
+                variety of web development projects for both small businesses
+                and large corporations. I have experience building responsive
+                websites and applications, as well as integrating with various
+                back-end systems. I am comfortable working with a range of tools
+                and frameworks, including popular content management systems
+                such as Shopify and Stripe.
               </p>
               <p>
-                As a designer and developer, I strive to create designs that are
-                not only visually appealing but also user-friendly and
-                functional. I believe that my diverse interests and skills allow
-                me to approach projects with a unique perspective, combining
-                elements of art, technology, and design to create innovative
-                solutions.
+                As a UI designer, I have a strong understanding of user
+                experience and user interface design principles. I understand
+                the importance of creating websites and applications that are
+                not only visually appealing, but also intuitive and easy to use.
+                In my work, I focus on creating clean and modern designs that
+                are tailored to my clients&apos; needs and goals. I pay close
+                attention to layout, typography, color, and other design
+                elements to create cohesive and visually appealing user
+                interfaces. I also consider user flow and navigation to ensure
+                that my designs are intuitive and easy to use. To create my
+                designs, I use a variety of tools and techniques, including
+                wireframing, prototyping, and user testing. I am proficient in
+                design software such as Figma &amp; the Adobe Creative Suite.
               </p>
               <p>
                 I am always looking for new challenges and opportunities to grow
                 and improve as a designer and developer, and I am excited to see
-                where my passion for design, music, and photography will take me
-                in the future.
+                where my passion for the web will take me in the future.
               </p>
             </div>
           </div>
