@@ -293,8 +293,23 @@ export default function Home({ articles }) {
           </h1>
           <p className="mt-6 text-lg text-zinc-600 dark:text-zinc-400">
             I’m Peter, a web developer &amp; designer living in Ithaca, New
-            York. I design and code beautifully simple websites. I take
-            photographs and play guitar. I love what I do.
+            York. I design and code beautifully simple websites. I take{' '}
+            <a
+              href="https://unsplash.com/@plloyd"
+              target="_blank"
+              className="underline decoration-dayAccent underline-offset-2 dark:decoration-nightAccent"
+            >
+              photographs
+            </a>{' '}
+            and play{' '}
+            <a
+              href="https://www.instagram.com/replicantnj/"
+              target="_blank"
+              className="underline decoration-dayAccent underline-offset-2 dark:decoration-nightAccent"
+            >
+              guitar
+            </a>
+            . I love what I do.
           </p>
           <div className="flex gap-6 mt-6">
             <SocialLink

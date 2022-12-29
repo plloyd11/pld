@@ -14,44 +14,50 @@ const projects = [
   {
     name: 'Spark Strategies',
     description:
-      'Design and development for a new digital agency, specializing in health and wellness consulting',
+      'Design, development and headless CMS integration for a wellness consulting agency.',
     link: { href: 'https://sparkstrategies.co', label: 'sparkstrategies.co' },
     logo: logoSpark,
+    technologies: ['Astro', 'Tailwind', 'Storyblok'],
   },
   {
     name: 'Craft & Commerce',
     description:
-      'High performance web animation library, hand-written in optimized WASM.',
+      'Web Development + Headless CMS integration for a digital integrated media agency.',
     link: { href: 'https://craftand.com/', label: 'craftand.com' },
     logo: logoCC,
+    technologies: ['Astro', 'Tailwind', 'Hygraph'],
   },
   {
     name: 'SSGA',
     description:
-      'Design and development for Saratoga Schenectady Gastroenterology Associates, a leading gastroenterology practice in the Capital Region.',
+      'Design, development and headless CMS integration for a leading gastroenterology practice.',
     link: { href: 'https://www.ssgastro.com/', label: 'ssgastro.com' },
     logo: logoSSGA,
+    technologies: ['Nuxt', 'Tailwind', 'Hygraph'],
   },
   {
     name: 'Solarflux',
     description:
-      'The operating system that powers our Planetaria space shuttles.',
+      'Branding, photography, design and development for a solar energy company.',
     link: { href: 'https://www.solarflux.co', label: 'solarflux.co' },
     logo: logoSolarflux,
+    technologies: ['11ty', 'Tailwind'],
   },
   {
     name: 'Quantum Vita Body Therapy',
     description:
-      'The schematics for the first rocket I designed that successfully made it to orbit.',
+      'Branding, photography, design and development for a massage therapy practice',
     link: { href: 'https://quantumvita.com', label: 'quantumvita.com' },
     logo: logoQVBT,
+    technologies: ['Astro', 'Tailwind'],
   },
   {
     name: 'Replicant',
     description:
-      'The schematics for the first rocket I designed that successfully made it to orbit.',
+      'Design, development, e-commerce and headless CMS integration for a death metal band.',
     link: { href: 'https://replicant.band', label: 'replicant.band' },
     logo: logoREP,
+    technologies: ['Astro', 'Tailwind', 'Snipcart'],
   },
 ]
 
@@ -78,7 +84,7 @@ export default function Projects() {
       </Head>
       <SimpleLayout
         title="Some of my favorite clients I've worked with over the years."
-        intro="As a solo contractor, I have had the privilege of working with some amazing clients over the years. Each project has been a unique and rewarding challenge, and I am grateful for the opportunity to contribute to my clients' success. On this page, you will find a selection of my past client projects, each one a testament to my dedication and expertise. Thank you for considering me for your next project."
+        intro="As a freelancer, I've had the privilege of working with some amazing clients over the years. Each project has been a unique and rewarding challenge, and I am grateful for the opportunity to contribute to my clients' success. On this page, you will find a selection of my past client projects, each one a testament to my dedication and expertise. I look forward to working with you on your next project."
       >
         <ul
           role="list"
@@ -86,11 +92,11 @@ export default function Projects() {
         >
           {projects.map((project) => (
             <Card as="li" key={project.name}>
-              <div className="relative z-10 flex h-12 w-12 items-center justify-center rounded-full bg-white shadow-md shadow-zinc-800/5 ring-1 ring-zinc-900/5 dark:border dark:border-zinc-700/50 dark:bg-zinc-800 dark:ring-0">
+              <div className="relative z-10 flex items-center justify-center w-12 h-12 bg-white rounded-full shadow-md shadow-zinc-800/5 ring-1 ring-zinc-900/5 dark:border dark:border-zinc-700/50 dark:bg-zinc-800 dark:ring-0">
                 <Image
                   src={project.logo}
                   alt=""
-                  className="h-8 w-8"
+                  className="w-8 h-8"
                   unoptimized
                 />
               </div>
@@ -98,10 +104,22 @@ export default function Projects() {
                 <Card.Link href={project.link.href}>{project.name}</Card.Link>
               </h2>
               <Card.Description>{project.description}</Card.Description>
-              <p className="relative z-10 mt-6 flex text-sm font-medium text-zinc-400 transition group-hover:text-nightAccent dark:text-zinc-200">
-                <LinkIcon className="h-6 w-6 flex-none" />
+              <p className="relative z-10 flex mt-6 text-sm font-medium transition text-zinc-400 group-hover:text-nightAccent dark:text-zinc-200">
+                <LinkIcon className="flex-none w-6 h-6" />
                 <span className="ml-2">{project.link.label}</span>
               </p>
+              <div className="mt-1 space-y-4">
+                <h2 className="mt-6 text-base font-semibold text-zinc-800 dark:text-zinc-100">
+                  Technologies
+                </h2>
+                <div className="flex gap-2">
+                  {project.technologies.map((technology) => (
+                    <span className="inline-flex items-center rounded bg-[#010B14] px-2.5 py-0.5 text-xs font-medium text-nightText">
+                      {technology}
+                    </span>
+                  ))}
+                </div>
+              </div>
             </Card>
           ))}
         </ul>

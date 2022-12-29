@@ -42,10 +42,14 @@ export default function Uses() {
         <div className="space-y-20">
           <ToolsSection title="Workstation">
             <Tool title="iMac Pro, 3.2 GHz 8-Core Intel Xeon W (2017)">
-              I was using an Intel-based 16” MacBook Pro prior to this and the
-              difference is night and day. I’ve never heard the fans turn on a
-              single time, even under the incredibly heavy loads I put it
-              through with our various launch simulations.
+              I absolutely love my iMac Pro! It is an incredibly powerful and
+              reliable machine, with a 3.2 GHz 8-Core Intel Xeon W processor
+              that can handle even the most demanding tasks with ease. It is
+              also beautifully designed and has a large, high-resolution
+              display, which is perfect for design work and other
+              visually-intensive tasks. it is a fantastic tool that has helped
+              me to be more productive and efficient in my work as a web
+              developer and UI designer.
             </Tool>
             <Tool title="IBM Model M SSK Industrial Keyboard">
               They don’t make keyboards the way they used to. I buy these any
@@ -64,11 +68,15 @@ export default function Uses() {
           </ToolsSection>
           <ToolsSection title="Development tools">
             <Tool title="VSCode">
-              I don’t care if it’s missing all of the fancy IDE features
-              everyone else relies on, Sublime Text is still the best text
-              editor ever made.
+              It is a powerful and feature-rich code editor that offers a wide
+              range of tools and features for writing, debugging, and testing
+              code. It is also highly customizable, with a wide range of
+              extensions and themes available to help me tailor it to my
+              specific needs and preferences. VSCode is an invaluable tool that
+              has helped me to be more productive and efficient in my work as a
+              web developer.
             </Tool>
-            <Tool title="Warp">
+            <Tool title="Warp Terminal">
               I’m honestly not even sure what features I get with this that
               aren’t just part of the macOS Terminal but it’s what I use.
             </Tool>
@@ -80,31 +88,52 @@ export default function Uses() {
           </ToolsSection>
           <ToolsSection title="Design">
             <Tool title="Figma">
-              We started using Figma as just a design tool but now it’s become
-              our virtual whiteboard for the entire company. Never would have
-              expected the collaboration features to be the real hook.
+              As a web developer and UI designer, I absolutely love using Figma
+              for my design work. It is an incredibly powerful and flexible
+              design tool that offers a wide range of features and is easy to
+              use. It is also cloud-based and cross-platform, which is
+              especially helpful when working on remote projects or when I'm on
+              the go.
             </Tool>
           </ToolsSection>
           <ToolsSection title="Productivity">
             <Tool title="Alfred">
-              It’s not the newest kid on the block but it’s still the fastest.
-              The Sublime Text of the application launcher world.
+              It is an incredibly efficient and reliable tool that helps me to
+              quickly find and access the files, applications, and information I
+              need. It is also highly customizable, with a wide range of
+              features and options available to help me tailor it to my specific
+              needs and preferences. Alfred is an invaluable tool that has saved
+              me countless hours of searching and helped me to be more
+              productive and efficient in my work.
             </Tool>
             <Tool title="Obsidian">
-              Using a daily notes system instead of trying to keep things
-              organized by topics has been super powerful for me. And with
-              Reflect, it’s still easy for me to keep all of that stuff
-              discoverable by topic even though all of my writing happens in the
-              daily note.
+              A powerful and feature-rich application that helps me to organize
+              my thoughts and ideas in a clear and structured way. It also
+              offers a wide range of tools and features for linking and
+              connecting notes, which helps me to build and organize my
+              knowledge in a more meaningful and coherent way. Obsidian is an
+              invaluable tool that has helped me to be more productive and
+              efficient in my work and personal projects.
             </Tool>
             <Tool title="Walling">
-              Great tool for scheduling meetings while protecting my calendar
-              and making sure I still have lots of time for deep work during the
-              week.
+              Walling is a powerful and feature-rich application that helps me
+              to organize and track my projects in a clear and structured way.
+              It also offers a wide range of tools and features for
+              collaboration and communication, which helps me to work
+              effectively with my team and clients. Walling is an invaluable
+              tool that has helped me to be more productive and efficient in my
+              work and has made it easier for me to deliver high-quality results
+              on time and within budget.
             </Tool>
             <Tool title="Arc Browser">
-              Simple tool for blocking distracting websites when I need to just
-              do the work and get some momentum going.
+              The Arc browser is a powerful and feature-rich web browser that
+              offers a wide range of benefits. One of the key benefits of Arc is
+              its focus on privacy and security. It offers a range of features
+              to help protect users' online privacy, including a private
+              browsing mode and the ability to block tracking cookies and other
+              online tracking technologies. Another benefit of Arc is its speed
+              and efficiency, as it is designed to be lightweight and
+              fast-loading.
             </Tool>
           </ToolsSection>
         </div>
