@@ -12,7 +12,6 @@ import {
   GitHubIcon,
   LinkedInIcon,
 } from '@/components/SocialIcons'
-import { ChevronRightIcon } from '@heroicons/react/24/solid'
 import image1 from '@/images/photos/image-1.jpg'
 import image2 from '@/images/photos/image-2.jpg'
 import image3 from '@/images/photos/image-3.jpg'
@@ -273,10 +272,20 @@ export default function Home({ articles }) {
                 Currently accepting new clients
               </span>
               <span className="ml-4 text-sm">Let&apos;s chat</span>
-              <ChevronRightIcon
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                fill="none"
+                viewBox="0 0 24 24"
+                stroke-width="1.5"
+                stroke="currentColor"
                 className="w-5 h-5 ml-2 text-gray-500"
-                aria-hidden="true"
-              />
+              >
+                <path
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  d="M8.25 4.5l7.5 7.5-7.5 7.5"
+                />
+              </svg>
             </a>
           </div>
           <h1 className="text-4xl font-bold tracking-tight text-zinc-800 dark:text-zinc-100 sm:text-5xl">
