@@ -114,9 +114,11 @@ export default function Projects() {
                 </h2>
                 <div className="flex gap-2">
                   {project.technologies.map((technology) => (
-                    <span className="inline-flex items-center rounded bg-[#010B14] px-2.5 py-0.5 text-xs font-medium text-nightText">
-                      {technology}
-                    </span>
+                    <div key={technology}>
+                      <span className="inline-flex items-center rounded bg-[#010B14] px-2.5 py-0.5 text-xs font-medium text-nightText">
+                        {technology}
+                      </span>
+                    </div>
                   ))}
                 </div>
               </div>

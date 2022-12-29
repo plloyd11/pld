@@ -297,6 +297,7 @@ export default function Home({ articles }) {
             <a
               href="https://unsplash.com/@plloyd"
               target="_blank"
+              rel="noreferrer"
               className="underline decoration-dayAccent underline-offset-2 dark:decoration-nightAccent"
             >
               photographs
@@ -305,6 +306,7 @@ export default function Home({ articles }) {
             <a
               href="https://www.instagram.com/replicantnj/"
               target="_blank"
+              rel="noreferrer"
               className="underline decoration-dayAccent underline-offset-2 dark:decoration-nightAccent"
             >
               guitar

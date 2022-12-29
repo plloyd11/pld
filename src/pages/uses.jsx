@@ -92,8 +92,8 @@ export default function Uses() {
               for my design work. It is an incredibly powerful and flexible
               design tool that offers a wide range of features and is easy to
               use. It is also cloud-based and cross-platform, which is
-              especially helpful when working on remote projects or when I'm on
-              the go.
+              especially helpful when working on remote projects or when
+              I&apos;m on the go.
             </Tool>
           </ToolsSection>
           <ToolsSection title="Productivity">
@@ -129,7 +129,7 @@ export default function Uses() {
               The Arc browser is a powerful and feature-rich web browser that
               offers a wide range of benefits. One of the key benefits of Arc is
               its focus on privacy and security. It offers a range of features
-              to help protect users' online privacy, including a private
+              to help protect users&apos; online privacy, including a private
               browsing mode and the ability to block tracking cookies and other
               online tracking technologies. Another benefit of Arc is its speed
               and efficiency, as it is designed to be lightweight and
