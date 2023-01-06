@@ -9,6 +9,8 @@ import logoSSGA from '@/images/logos/ssga.svg'
 import logoSolarflux from '@/images/logos/solarflux.svg'
 import logoQVBT from '@/images/logos/qvbt.png'
 import logoREP from '@/images/logos/rep.png'
+import logoBB from '@/images/logos/bbLogo.svg'
+import logoSimply from '@/images/logos/simply.svg'
 
 const projects = [
   {
@@ -52,9 +54,31 @@ const projects = [
     technologies: ['Astro', 'Tailwind'],
   },
   {
+    name: 'Blackbird Yoga Studio',
+    description:
+      'Branding, photography, design and development for a yoga studio in NJ',
+    link: {
+      href: 'https://blackbirdyogastudio.com/',
+      label: 'blackbirdyogastudio.com',
+    },
+    logo: logoBB,
+    technologies: ['Astro', 'Tailwind', 'Lightroom'],
+  },
+  {
+    name: 'Simply Massage',
+    description:
+      'Branding, photography, design and development for a massage therapist in NJ',
+    link: {
+      href: 'https://simplymassagenj.com',
+      label: 'simplymassagenj.com',
+    },
+    logo: logoSimply,
+    technologies: ['Astro', 'Tailwind', 'Lightroom'],
+  },
+  {
     name: 'Replicant',
     description:
-      'Design, development, e-commerce and headless CMS integration for a death metal band.',
+      'Design, development, e-commerce and headless CMS integration for a death metal band',
     link: { href: 'https://replicant.band', label: 'replicant.band' },
     logo: logoREP,
     technologies: ['Astro', 'Tailwind', 'Snipcart'],
