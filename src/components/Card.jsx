@@ -28,8 +28,8 @@ Card.Link = function CardLink({ children, ...props }) {
   return (
     <>
       <div className="absolute -inset-y-6 -inset-x-4 z-0 scale-95 bg-zinc-50 opacity-0 transition group-hover:scale-100 group-hover:opacity-100 dark:bg-[#0F3B57]/20 sm:-inset-x-6 sm:rounded-2xl" />
-      <Link {...props}>
-        <span className="absolute z-20 -inset-y-6 -inset-x-4 sm:-inset-x-6 sm:rounded-2xl" />
+      <Link {...props} target="_blank" rel="noopener">
+        <span className="absolute -inset-y-6 -inset-x-4 z-20 sm:-inset-x-6 sm:rounded-2xl" />
         <span className="relative z-10">{children}</span>
       </Link>
     </>
@@ -56,10 +56,10 @@ Card.Cta = function CardCta({ children }) {
   return (
     <div
       aria-hidden="true"
-      className="relative z-10 flex items-center mt-4 text-sm font-medium text-dayAccent dark:text-nightAccent"
+      className="relative z-10 mt-4 flex items-center text-sm font-medium text-dayAccent dark:text-nightAccent"
     >
       {children}
-      <ChevronRightIcon className="w-4 h-4 ml-1 stroke-current" />
+      <ChevronRightIcon className="ml-1 h-4 w-4 stroke-current" />
     </div>
   )
 }
