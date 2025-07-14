@@ -4,6 +4,8 @@ import Head from 'next/head'
 import { Card } from '@/components/Card'
 import { SimpleLayout } from '@/components/SimpleLayout'
 import logoSpark from '@/images/logos/spark.svg'
+import logoBrandecation from '@/images/logos/brandecation.svg'
+import logoWayFong from '@/images/logos/wf.png'
 import logoCC from '@/images/logos/cc.svg'
 import logoSSGA from '@/images/logos/ssga.svg'
 import logoSolarflux from '@/images/logos/solarflux.svg'
@@ -21,6 +23,22 @@ const projects = [
     link: { href: 'https://sparkstrategies.co', label: 'sparkstrategies.co' },
     logo: logoSpark,
     technologies: ['Astro', 'Tailwind', 'Storyblok'],
+  },
+  {
+    name: 'Brandecation',
+    description:
+      'Design and development of a marketing site for a Powersports LMS Platform.',
+    link: { href: 'https://brandecation.com', label: 'brandecation.com' },
+    logo: logoBrandecation,
+    technologies: ['Astro', 'Tailwind', 'Svelte'],
+  },
+  {
+    name: 'Way Fong',
+    description:
+      'Design, development, photography and headless CMS integration for a wholesale food distributor.',
+    link: { href: 'https://wayfong.com', label: 'wayfong.com' },
+    logo: logoWayFong,
+    technologies: ['Astro', 'Tailwind', 'Hygraph'],
   },
   {
     name: 'Craft & Commerce',
@@ -125,11 +143,11 @@ export default function Projects() {
         >
           {projects.map((project) => (
             <Card as="li" key={project.name}>
-              <div className="relative z-10 flex h-12 w-12 items-center justify-center rounded-full bg-white shadow-md shadow-zinc-800/5 ring-1 ring-zinc-900/5 dark:border dark:border-zinc-700/50 dark:bg-zinc-800 dark:ring-0">
+              <div className="flex relative z-10 justify-center items-center w-12 h-12 bg-white rounded-full ring-1 shadow-md shadow-zinc-800/5 ring-zinc-900/5 dark:border dark:border-zinc-700/50 dark:bg-zinc-800 dark:ring-0">
                 <Image
                   src={project.logo}
                   alt=""
-                  className="h-8 w-8"
+                  className="w-8 h-8"
                   unoptimized
                 />
               </div>
@@ -137,8 +155,8 @@ export default function Projects() {
                 <Card.Link href={project.link.href}>{project.name}</Card.Link>
               </h2>
               <Card.Description>{project.description}</Card.Description>
-              <p className="relative z-10 mt-6 flex text-sm font-medium text-zinc-400 transition group-hover:text-nightAccent dark:text-zinc-200">
-                <LinkIcon className="h-6 w-6 flex-none" />
+              <p className="flex relative z-10 mt-6 text-sm font-medium transition text-zinc-400 group-hover:text-nightAccent dark:text-zinc-200">
+                <LinkIcon className="flex-none w-6 h-6" />
                 <span className="ml-2">{project.link.label}</span>
               </p>
               <div className="mt-1 space-y-4">
