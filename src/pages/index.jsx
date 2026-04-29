@@ -20,9 +20,10 @@ import image5 from '@/images/photos/image-5.jpg'
 import logoObservatory from '@/images/logos/observatory.svg'
 import logoWorkwave from '@/images/logos/workwave.svg'
 import logoPlanetaria from '@/images/logos/planetaria.svg'
+import logoSpark from '@/images/logos/spark.svg'
+import logoBB from '@/images/logos/bbLogo.svg'
+import logoWayFong from '@/images/logos/wf.png'
 import { generateRssFeed } from '@/lib/generateRssFeed'
-import { getAllArticles } from '@/lib/getAllArticles'
-import { formatDate } from '@/lib/formatDate'
 
 function MailIcon(props) {
   return (
@@ -42,6 +43,44 @@ function MailIcon(props) {
       <path
         d="m4 6 6.024 5.479a2.915 2.915 0 0 0 3.952 0L20 6"
         className="stroke-zinc-400 dark:stroke-zinc-500"
+      />
+    </svg>
+  )
+}
+
+function CameraIcon(props) {
+  return (
+    <svg
+      viewBox="0 0 24 24"
+      fill="none"
+      strokeWidth="1.5"
+      strokeLinecap="round"
+      strokeLinejoin="round"
+      aria-hidden="true"
+      {...props}
+    >
+      <path
+        d="M2.75 9.75a3 3 0 0 1 3-3h1.86a2 2 0 0 0 1.664-.89l.812-1.22a2 2 0 0 1 1.664-.89h2.4a2 2 0 0 1 1.664.89l.812 1.22a2 2 0 0 0 1.664.89h1.86a3 3 0 0 1 3 3v8.5a3 3 0 0 1-3 3H5.75a3 3 0 0 1-3-3v-8.5Z"
+        className="fill-zinc-100 stroke-zinc-400 dark:fill-zinc-100/10 dark:stroke-zinc-500"
+      />
+      <circle
+        cx="12"
+        cy="13"
+        r="3.25"
+        className="stroke-zinc-400 dark:stroke-zinc-500"
+      />
+    </svg>
+  )
+}
+
+function ArrowRightIcon(props) {
+  return (
+    <svg viewBox="0 0 16 16" fill="none" aria-hidden="true" {...props}>
+      <path
+        d="M4.75 8h6.5m0 0L8 4.75M11.25 8 8 11.25"
+        strokeWidth="1.5"
+        strokeLinecap="round"
+        strokeLinejoin="round"
       />
     </svg>
   )
@@ -83,25 +122,52 @@ function ArrowDownIcon(props) {
   )
 }
 
-function Article({ article }) {
+const featuredClients = [
+  {
+    name: 'Spark Strategies',
+    description:
+      'Design, development and headless CMS integration for a wellness consulting agency.',
+    link: { href: 'https://sparkstrategies.co', label: 'sparkstrategies.co' },
+    logo: logoSpark,
+  },
+  {
+    name: 'Blackbird Yoga Studio',
+    description:
+      'Branding, photography, design and development for a yoga studio in NJ.',
+    link: {
+      href: 'https://blackbirdyogastudio.com/',
+      label: 'blackbirdyogastudio.com',
+    },
+    logo: logoBB,
+  },
+  {
+    name: 'Way Fong',
+    description:
+      'Design, development, photography and headless CMS integration for a wholesale food distributor.',
+    link: { href: 'https://wayfong.com', label: 'wayfong.com' },
+    logo: logoWayFong,
+  },
+]
+
+function FeaturedClient({ client }) {
   return (
     <Card as="article">
-      <Card.Title href={`/articles/${article.slug}`}>
-        {article.title}
-      </Card.Title>
-      <Card.Eyebrow as="time" dateTime={article.date} decorate>
-        {formatDate(article.date)}
-      </Card.Eyebrow>
-      <Card.Description>{article.description}</Card.Description>
-      <Card.Cta>Read article</Card.Cta>
+      <div className="flex relative z-10 justify-center items-center w-12 h-12 bg-white rounded-full ring-1 shadow-md shadow-zinc-800/5 ring-zinc-900/5 dark:border dark:border-zinc-700/50 dark:bg-zinc-800 dark:ring-0">
+        <Image src={client.logo} alt="" className="w-8 h-8" unoptimized />
+      </div>
+      <h2 className="mt-6 text-base font-semibold text-zinc-800 dark:text-zinc-100">
+        <Card.Link href={client.link.href}>{client.name}</Card.Link>
+      </h2>
+      <Card.Description>{client.description}</Card.Description>
+      <Card.Cta>{client.link.label}</Card.Cta>
     </Card>
   )
 }
 
 function SocialLink({ icon: Icon, ...props }) {
   return (
-    <Link className="group -m-1 p-1" {...props}>
-      <Icon className="h-6 w-6 fill-zinc-500 transition group-hover:fill-zinc-600 dark:fill-zinc-400 dark:group-hover:fill-zinc-300" />
+    <Link className="p-1 -m-1 group" {...props}>
+      <Icon className="w-6 h-6 transition fill-zinc-500 group-hover:fill-zinc-600 dark:fill-zinc-400 dark:group-hover:fill-zinc-300" />
     </Link>
   )
 }
@@ -111,16 +177,16 @@ function Newsletter() {
     <form
       action="https://formspree.io/f/xwkzgwav"
       method="POST"
-      className="rounded-2xl border border-zinc-100 p-6 dark:border-zinc-700/40"
+      className="p-6 rounded-2xl border border-zinc-100 dark:border-zinc-700/40"
     >
       <h2 className="flex text-sm font-semibold text-zinc-900 dark:text-zinc-100">
-        <MailIcon className="h-6 w-6 flex-none" />
+        <MailIcon className="flex-none w-6 h-6" />
         <span className="ml-3">Stay up to date</span>
       </h2>
       <p className="mt-2 text-sm text-zinc-600 dark:text-zinc-400">
         Get notified when I publish something new, and unsubscribe at any time.
       </p>
-      <div className="mt-6 flex">
+      <div className="flex mt-6">
         <input
           type="email"
           placeholder="Email address"
@@ -128,7 +194,7 @@ function Newsletter() {
           required
           className="min-w-0 flex-auto appearance-none rounded-md border border-zinc-900/10 bg-white px-3 py-[calc(theme(spacing.2)-1px)] shadow-md shadow-zinc-800/5 placeholder:text-zinc-400 focus:border-teal-500 focus:outline-none focus:ring-4 focus:ring-teal-500/10 dark:border-zinc-700 dark:bg-zinc-700/[0.15] dark:text-zinc-200 dark:placeholder:text-zinc-500 dark:focus:border-teal-400 dark:focus:ring-teal-400/10 sm:text-sm"
         />
-        <Button type="submit" className="ml-4 flex-none">
+        <Button type="submit" className="flex-none ml-4">
           Join
         </Button>
       </div>
@@ -168,20 +234,20 @@ function Resume() {
   ]
 
   return (
-    <div className="rounded-2xl border border-zinc-100 p-6 dark:border-zinc-700/40">
+    <div className="p-6 rounded-2xl border border-zinc-100 dark:border-zinc-700/40">
       <h2 className="flex text-sm font-semibold text-zinc-900 dark:text-zinc-100">
-        <BriefcaseIcon className="h-6 w-6 flex-none" />
+        <BriefcaseIcon className="flex-none w-6 h-6" />
         <span className="ml-3">Work</span>
       </h2>
       <ol className="mt-6 space-y-4">
         {resume.map((role, roleIndex) => (
           <li key={roleIndex} className="flex gap-4">
-            <div className="relative mt-1 flex h-10 w-10 flex-none items-center justify-center rounded-full shadow-md shadow-zinc-800/5 ring-1 ring-zinc-900/5 dark:border dark:border-zinc-700/50 dark:bg-zinc-800 dark:ring-0">
-              <Image src={role.logo} alt="" className="h-7 w-7" unoptimized />
+            <div className="flex relative flex-none justify-center items-center mt-1 w-10 h-10 rounded-full ring-1 shadow-md shadow-zinc-800/5 ring-zinc-900/5 dark:border dark:border-zinc-700/50 dark:bg-zinc-800 dark:ring-0">
+              <Image src={role.logo} alt="" className="w-7 h-7" unoptimized />
             </div>
-            <dl className="flex flex-auto flex-wrap gap-x-2">
+            <dl className="flex flex-wrap flex-auto gap-x-2">
               <dt className="sr-only">Company</dt>
-              <dd className="w-full flex-none text-sm font-medium text-zinc-900 dark:text-zinc-100">
+              <dd className="flex-none w-full text-sm font-medium text-zinc-900 dark:text-zinc-100">
                 {role.company}
               </dd>
               <dt className="sr-only">Role</dt>
@@ -211,10 +277,33 @@ function Resume() {
         href="/peter-lloyd-resume.pdf"
         download="peter-lloyd-resume.pdf"
         variant="secondary"
-        className="group mt-6 w-full"
+        className="mt-6 w-full group"
       >
         Download Resume
-        <ArrowDownIcon className="h-4 w-4 stroke-zinc-400 transition group-active:stroke-zinc-600 dark:group-hover:stroke-zinc-50 dark:group-active:stroke-zinc-50" />
+        <ArrowDownIcon className="w-4 h-4 transition stroke-zinc-400 group-active:stroke-zinc-600 dark:group-hover:stroke-zinc-50 dark:group-active:stroke-zinc-50" />
+      </Button>
+    </div>
+  )
+}
+
+function PhotographyPromo() {
+  return (
+    <div className="p-6 rounded-2xl border border-zinc-100 dark:border-zinc-700/40">
+      <h2 className="flex text-sm font-semibold text-zinc-900 dark:text-zinc-100">
+        <CameraIcon className="flex-none w-6 h-6" />
+        <span className="ml-3">Photography</span>
+      </h2>
+      <p className="mt-2 text-sm text-zinc-600 dark:text-zinc-400">
+        Headshots, portraits, products and on-location work — let&apos;s create
+        something memorable together.
+      </p>
+      <Button
+        href="/photography"
+        variant="secondary"
+        className="mt-6 w-full group"
+      >
+        Explore photography
+        <ArrowRightIcon className="w-4 h-4 transition stroke-zinc-400 group-active:stroke-zinc-600 dark:group-hover:stroke-zinc-50 dark:group-active:stroke-zinc-50" />
       </Button>
     </div>
   )
@@ -225,7 +314,7 @@ function Photos() {
 
   return (
     <div className="mt-16 sm:mt-20">
-      <div className="-my-4 flex justify-center gap-5 overflow-hidden py-4 sm:gap-8">
+      <div className="flex overflow-hidden gap-5 justify-center py-4 -my-4 sm:gap-8">
         {[image1, image2, image3, image4, image5].map((image, imageIndex) => (
           <div
             key={image.src}
@@ -238,7 +327,7 @@ function Photos() {
               src={image}
               alt=""
               sizes="(min-width: 640px) 18rem, 11rem"
-              className="absolute inset-0 h-full w-full object-cover"
+              className="object-cover absolute inset-0 w-full h-full"
             />
           </div>
         ))}
@@ -247,7 +336,7 @@ function Photos() {
   )
 }
 
-export default function Home({ articles }) {
+export default function Home() {
   return (
     <>
       <Head>
@@ -264,7 +353,7 @@ export default function Home({ articles }) {
           <div className="my-8">
             <a
               href="https://app.hellobonsai.com/u/observatory/bc70f65f-cc46-4869-9171-b7110b0e5b27"
-              className="inline-flex items-center rounded-full bg-black p-1 pr-2 text-white hover:text-gray-200 sm:text-base lg:text-sm xl:text-base"
+              className="inline-flex items-center p-1 pr-2 text-white bg-black rounded-full hover:text-gray-200 sm:text-base lg:text-sm xl:text-base"
               target="_blank"
               rel="noopener noreferrer"
             >
@@ -278,7 +367,7 @@ export default function Home({ articles }) {
                 viewBox="0 0 24 24"
                 stroke-width="1.5"
                 stroke="currentColor"
-                className="ml-2 h-5 w-5 text-gray-500"
+                className="ml-2 w-5 h-5 text-gray-500"
               >
                 <path
                   stroke-linecap="round"
@@ -313,7 +402,7 @@ export default function Home({ articles }) {
             </a>
             . I love what I do.
           </p>
-          <div className="mt-6 flex gap-6">
+          <div className="flex gap-6 mt-6">
             <SocialLink
               href="https://twitter.com"
               aria-label="Follow on Twitter"
@@ -339,14 +428,26 @@ export default function Home({ articles }) {
       </Container>
       <Photos />
       <Container className="mt-24 md:mt-28">
-        <div className="mx-auto grid max-w-xl grid-cols-1 gap-y-20 lg:max-w-none lg:grid-cols-2">
+        <div className="grid grid-cols-1 gap-y-20 mx-auto max-w-xl lg:max-w-none lg:grid-cols-2">
           <div className="flex flex-col gap-16">
-            {articles.map((article) => (
-              <Article key={article.slug} article={article} />
+            <h2 className="text-base font-semibold tracking-tight text-zinc-800 dark:text-zinc-100">
+              Featured clients
+            </h2>
+            {featuredClients.map((client) => (
+              <FeaturedClient key={client.name} client={client} />
             ))}
+            <Button
+              href="/clients"
+              variant="secondary"
+              className="self-start group"
+            >
+              View all clients
+              <ArrowRightIcon className="w-4 h-4 transition stroke-zinc-400 group-active:stroke-zinc-600 dark:group-hover:stroke-zinc-50 dark:group-active:stroke-zinc-50" />
+            </Button>
           </div>
           <div className="space-y-10 lg:pl-16 xl:pl-24">
             <Newsletter />
+            <PhotographyPromo />
             <Resume />
           </div>
         </div>
@@ -361,10 +462,6 @@ export async function getStaticProps() {
   }
 
   return {
-    props: {
-      articles: (await getAllArticles())
-        .slice(0, 4)
-        .map(({ component, ...meta }) => meta),
-    },
+    props: {},
   }
 }

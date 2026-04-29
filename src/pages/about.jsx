@@ -55,24 +55,25 @@ export default function About() {
                 src={portraitImage}
                 alt=""
                 sizes="(min-width: 1024px) 32rem, 20rem"
-                className="object-cover aspect-square rotate-3 rounded-2xl bg-zinc-100 dark:bg-zinc-800"
+                className="object-cover rounded-2xl rotate-3 aspect-square bg-zinc-100 dark:bg-zinc-800"
               />
             </div>
           </div>
           <div className="lg:order-first lg:row-span-2">
             <h1 className="text-4xl font-bold tracking-tight text-zinc-800 dark:text-zinc-100 sm:text-5xl">
               I’m Peter Lloyd. I live in Ithaca, New York, where I design and
-              code beautiful websites.
+              code beautiful websites and take lots of photographs.
             </h1>
-            <div className="mt-6 text-base space-y-7 text-zinc-600 dark:text-nightText">
+            <div className="mt-6 space-y-7 text-base text-zinc-600 dark:text-nightText">
               <p>
-                As a web developer with nine years of professional experience, I
-                have a strong foundation in front-end development and am skilled
-                in a range of programming languages and technologies. I am
-                proficient in HTML, CSS, and JavaScript, and have a deep
-                understanding of user experience and user interface design. I am
-                committed to creating websites and applications that are not
-                only visually appealing, but also intuitive and easy to use.
+                As a web developer with fourteen years of professional
+                experience, I have a strong foundation in front-end development
+                and am skilled in a range of programming languages and
+                technologies. I am proficient in HTML, CSS, and JavaScript, and
+                have a deep understanding of user experience and user interface
+                design. I am committed to creating websites and applications
+                that are not only visually appealing, but also intuitive and
+                easy to use.
               </p>
               <p>
                 Throughout my career, I have had the opportunity to work on a
@@ -107,12 +108,6 @@ export default function About() {
           </div>
           <div className="lg:pl-20">
             <ul role="list">
-              <SocialLink
-                href="https://twitter.com/replipete"
-                icon={TwitterIcon}
-              >
-                Follow on Twitter
-              </SocialLink>
               <SocialLink
                 href="https://unsplash.com/@plloyd"
                 icon={UnsplashIcon}

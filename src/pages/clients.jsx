@@ -10,6 +10,7 @@ import logoCC from '@/images/logos/cc.svg'
 import logoSSGA from '@/images/logos/ssga.svg'
 import logoSolarflux from '@/images/logos/solarflux.svg'
 import logoQVBT from '@/images/logos/qvbt.png'
+import logoUrbanPT from '@/images/logos/urban.svg'
 import logoREP from '@/images/logos/rep.png'
 import logoBB from '@/images/logos/bbLogo.svg'
 import logoSimply from '@/images/logos/simply.svg'
@@ -58,6 +59,14 @@ const projects = [
     },
     logo: logoBB,
     technologies: ['Astro', 'Tailwind', 'Lightroom'],
+  },
+  {
+    name: 'Urban Physical Therapy',
+    description:
+      'Photography, website design and development for a physical therapy practice in Ithaca, NY.',
+    link: { href: 'https://urbanpt.rehab/', label: 'urbanpt.rehab' },
+    logo: logoUrbanPT,
+    technologies: ['Astro', 'Tailwind'],
   },
   {
     name: 'SSGA',
