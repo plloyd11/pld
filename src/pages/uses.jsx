@@ -1,8 +1,7 @@
-import Head from 'next/head'
-
 import { Card } from '@/components/Card'
 import { Section } from '@/components/Section'
 import { SimpleLayout } from '@/components/SimpleLayout'
+import { SocialMeta } from '@/components/SocialMeta'
 
 function ToolsSection({ children, ...props }) {
   return (
@@ -28,13 +27,11 @@ function Tool({ title, href, children }) {
 export default function Uses() {
   return (
     <>
-      <Head>
-        <title>Uses - Peter Lloyd</title>
-        <meta
-          name="description"
-          content="Software I use, gadgets I love, and other things I recommend."
-        />
-      </Head>
+      <SocialMeta
+        title="Uses - Peter Lloyd"
+        description="Software I use, gadgets I love, and other things I recommend."
+        path="/uses"
+      />
       <SimpleLayout
         title="Software I use, gadgets I love, and other things I recommend."
         intro="I get asked a lot about the things I use to build software, stay productive, or buy to fool myself into thinking I’m being productive when I’m really just procrastinating. Here’s a big list of all of my favorite stuff."

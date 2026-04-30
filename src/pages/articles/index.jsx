@@ -1,7 +1,6 @@
-import Head from 'next/head'
-
 import { Card } from '@/components/Card'
 import { SimpleLayout } from '@/components/SimpleLayout'
+import { SocialMeta } from '@/components/SocialMeta'
 import { getAllArticles } from '@/lib/getAllArticles'
 import { formatDate } from '@/lib/formatDate'
 
@@ -37,13 +36,11 @@ function Article({ article }) {
 export default function ArticlesIndex({ articles }) {
   return (
     <>
-      <Head>
-        <title>Articles - Peter Lloyd</title>
-        <meta
-          name="description"
-          content="All of my long-form thoughts on programming, leadership, product design, and more, collected in chronological order."
-        />
-      </Head>
+      <SocialMeta
+        title="Articles - Peter Lloyd"
+        description="All of my long-form thoughts on programming, leadership, product design, and more, collected in chronological order."
+        path="/articles"
+      />
       <SimpleLayout
         title="Writing on web development, design, and the future of work"
         intro="All of my long-form thoughts on programming, product design, technology and more, collected in chronological order."

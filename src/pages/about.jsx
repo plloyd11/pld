@@ -1,9 +1,9 @@
 import Image from 'next/image'
-import Head from 'next/head'
 import Link from 'next/link'
 import clsx from 'clsx'
 
 import { Container } from '@/components/Container'
+import { SocialMeta } from '@/components/SocialMeta'
 import {
   TwitterIcon,
   UnsplashIcon,
@@ -40,13 +40,12 @@ function MailIcon(props) {
 export default function About() {
   return (
     <>
-      <Head>
-        <title>About - Peter Lloyd</title>
-        <meta
-          name="description"
-          content="I’m Peter Lloyd. I live in New York City, where I design the future."
-        />
-      </Head>
+      <SocialMeta
+        title="About - Peter Lloyd"
+        description="I’m Peter Lloyd. I live in Ithaca, New York, where I design and code beautiful websites and take lots of photographs."
+        image={portraitImage}
+        path="/about"
+      />
       <Container className="mt-16 sm:mt-32">
         <div className="grid grid-cols-1 gap-y-16 lg:grid-cols-2 lg:grid-rows-[auto_1fr] lg:gap-y-12">
           <div className="lg:pl-20">

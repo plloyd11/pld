@@ -6,6 +6,7 @@ import clsx from 'clsx'
 import { Button } from '@/components/Button'
 import { Card } from '@/components/Card'
 import { Container } from '@/components/Container'
+import { SocialMeta } from '@/components/SocialMeta'
 import {
   TwitterIcon,
   InstagramIcon,
@@ -339,15 +340,11 @@ function Photos() {
 export default function Home() {
   return (
     <>
-      <Head>
-        <title>
-          Peter Lloyd | Front-End Developer, UI/UX Designer & Photographer
-        </title>
-        <meta
-          name="description"
-          content="I’m Peter, a web developer &amp; designer living in Ithaca, New York. I design and code beautifully simple websites. I take photographs and play guitar. I love what I do."
-        />
-      </Head>
+      <SocialMeta
+        title="Peter Lloyd | Front-End Developer, UI/UX Designer & Photographer"
+        description="I’m Peter, a web developer & designer living in Ithaca, New York. I design and code beautifully simple websites. I take photographs and play guitar. I love what I do."
+        path="/"
+      />
       <Container className="mt-9">
         <div className="max-w-2xl">
           <div className="my-8">

@@ -1,9 +1,9 @@
-import Head from 'next/head'
 import { useRouter } from 'next/router'
 
 import { Container } from '@/components/Container'
 import { formatDate } from '@/lib/formatDate'
 import { Prose } from '@/components/Prose'
+import { SocialMeta } from '@/components/SocialMeta'
 
 function ArrowLeftIcon(props) {
   return (
@@ -32,10 +32,13 @@ export function ArticleLayout({
 
   return (
     <>
-      <Head>
-        <title>{`${meta.title} - Peter Lloyd`}</title>
-        <meta name="description" content={meta.description} />
-      </Head>
+      <SocialMeta
+        title={`${meta.title} - Peter Lloyd`}
+        description={meta.description}
+        image={meta.image}
+        path={router.asPath}
+        type="article"
+      />
       <Container className="mt-16 lg:mt-32">
         <div className="xl:relative">
           <div className="max-w-2xl mx-auto">

@@ -1,8 +1,8 @@
 import Image from 'next/image'
-import Head from 'next/head'
 
 import { Card } from '@/components/Card'
 import { SimpleLayout } from '@/components/SimpleLayout'
+import { SocialMeta } from '@/components/SocialMeta'
 import logoSpark from '@/images/logos/spark.svg'
 import logoBrandecation from '@/images/logos/brandecation.svg'
 import logoWayFong from '@/images/logos/wf.png'
@@ -135,13 +135,11 @@ function LinkIcon(props) {
 export default function Projects() {
   return (
     <>
-      <Head>
-        <title>Clients - Peter Lloyd</title>
-        <meta
-          name="description"
-          content="Some of my favorite clients I've worked with over the years."
-        />
-      </Head>
+      <SocialMeta
+        title="Clients - Peter Lloyd"
+        description="Some of my favorite clients I've worked with over the years."
+        path="/clients"
+      />
       <SimpleLayout
         title="Some of my favorite clients I've worked with over the years."
         intro="As a freelancer, I've had the privilege of working with some amazing clients over the years. Each project has been a unique and rewarding challenge, and I am grateful for the opportunity to contribute to my clients' success. On this page, you will find a selection of my past client projects, each one a testament to my dedication and expertise. I look forward to working with you on your next project."

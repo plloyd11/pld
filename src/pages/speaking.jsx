@@ -1,8 +1,7 @@
-import Head from 'next/head'
-
 import { Card } from '@/components/Card'
 import { Section } from '@/components/Section'
 import { SimpleLayout } from '@/components/SimpleLayout'
+import { SocialMeta } from '@/components/SocialMeta'
 
 function SpeakingSection({ children, ...props }) {
   return (
@@ -28,13 +27,11 @@ function Appearance({ title, description, event, cta, href }) {
 export default function Speaking() {
   return (
     <>
-      <Head>
-        <title>Speaking - Peter Lloyd</title>
-        <meta
-          name="description"
-          content="I’ve spoken at events all around the world and been interviewed for many podcasts."
-        />
-      </Head>
+      <SocialMeta
+        title="Speaking - Peter Lloyd"
+        description="I’ve spoken at events all around the world and been interviewed for many podcasts."
+        path="/speaking"
+      />
       <SimpleLayout
         title="I’ve spoken at events all around the world and been interviewed for many podcasts."
         intro="One of my favorite ways to share my ideas is live on stage, where there’s so much more communication bandwidth than there is in writing, and I love podcast interviews because they give me the opportunity to answer questions instead of just present my opinions."

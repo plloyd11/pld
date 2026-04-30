@@ -1,9 +1,9 @@
-import Head from 'next/head'
 import Image from 'next/image'
 
 import { Container } from '@/components/Container'
 import { Section } from '@/components/Section'
 import { SimpleLayout } from '@/components/SimpleLayout'
+import { SocialMeta } from '@/components/SocialMeta'
 import heroImage from '@/images/work-together.jpg'
 import nicoleImage from '@/images/nicole.jpg'
 import promoImage from '@/images/promo.jpg'
@@ -100,13 +100,12 @@ function Testimonial({ quote, name, role, image }) {
 export default function Photography() {
   return (
     <>
-      <Head>
-        <title>Photography - Peter Lloyd</title>
-        <meta
-          name="description"
-          content="Working together on photography — headshots, portraits, products and on-location work for friends and small businesses."
-        />
-      </Head>
+      <SocialMeta
+        title="Photography - Peter Lloyd"
+        description="Working together on photography — headshots, portraits, products and on-location work for friends and small businesses."
+        image={heroImage}
+        path="/photography"
+      />
       <Container className="mt-16 sm:mt-32">
         <div className="overflow-hidden rounded-2xl bg-zinc-100 dark:bg-zinc-800">
           <Image
