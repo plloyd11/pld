@@ -138,6 +138,30 @@ function DesktopNavigation(props) {
   )
 }
 
+function ContactButton() {
+  return (
+    <a
+      href="https://app.hellobonsai.com/u/observatory/bc70f65f-cc46-4869-9171-b7110b0e5b27"
+      target="_blank"
+      rel="noopener noreferrer"
+      className="inline-flex items-center rounded-full bg-nightAccent px-4 py-2 text-sm font-semibold text-dayText shadow-lg shadow-zinc-800/5 ring-1 ring-zinc-900/5 backdrop-blur transition hover:bg-yellow-300 dark:ring-white/10"
+    >
+      <svg
+        viewBox="0 0 24 24"
+        fill="none"
+        strokeWidth="1.5"
+        strokeLinecap="round"
+        strokeLinejoin="round"
+        aria-hidden="true"
+        className="h-4 w-4 stroke-current sm:mr-2"
+      >
+        <path d="M8 2.75v2.5M16 2.75v2.5M3.5 9.25h17M4.75 5.25h14.5a2 2 0 0 1 2 2v11.5a2 2 0 0 1-2 2H4.75a2 2 0 0 1-2-2V7.25a2 2 0 0 1 2-2Z" />
+      </svg>
+      <span className="hidden sm:inline">Let’s chat</span>
+    </a>
+  )
+}
+
 function clamp(number, a, b) {
   let min = Math.min(a, b)
   let max = Math.max(a, b)
@@ -343,7 +367,11 @@ export function Header() {
                 <MobileNavigation className="pointer-events-auto md:hidden" />
                 <DesktopNavigation className="pointer-events-auto hidden md:block" />
               </div>
-              <div className="flex justify-end md:flex-1" />
+              <div className="flex justify-end md:flex-1">
+                <div className="pointer-events-auto">
+                  <ContactButton />
+                </div>
+              </div>
             </div>
           </Container>
         </div>

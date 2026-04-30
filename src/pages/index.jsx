@@ -341,7 +341,7 @@ export default function Home() {
     <>
       <Head>
         <title>
-          Peter Lloyd - Software designer, founder, and amateur astronaut
+          Peter Lloyd | Front-End Developer, UI/UX Designer & Photographer
         </title>
         <meta
           name="description"
