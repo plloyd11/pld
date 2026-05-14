@@ -153,8 +153,8 @@ const featuredClients = [
 function FeaturedClient({ client }) {
   return (
     <Card as="article">
-      <div className="flex relative z-10 justify-center items-center w-12 h-12 bg-white rounded-full ring-1 shadow-md shadow-zinc-800/5 ring-zinc-900/5 dark:border dark:border-zinc-700/50 dark:bg-zinc-800 dark:ring-0">
-        <Image src={client.logo} alt="" className="w-8 h-8" unoptimized />
+      <div className="relative z-10 flex h-12 w-12 items-center justify-center rounded-full bg-white shadow-md shadow-zinc-800/5 ring-1 ring-zinc-900/5 dark:border dark:border-zinc-700/50 dark:bg-zinc-800 dark:ring-0">
+        <Image src={client.logo} alt="" className="h-8 w-8" unoptimized />
       </div>
       <h2 className="mt-6 text-base font-semibold text-zinc-800 dark:text-zinc-100">
         <Card.Link href={client.link.href}>{client.name}</Card.Link>
@@ -167,8 +167,8 @@ function FeaturedClient({ client }) {
 
 function SocialLink({ icon: Icon, ...props }) {
   return (
-    <Link className="p-1 -m-1 group" {...props}>
-      <Icon className="w-6 h-6 transition fill-zinc-500 group-hover:fill-zinc-600 dark:fill-zinc-400 dark:group-hover:fill-zinc-300" />
+    <Link className="group -m-1 p-1" {...props}>
+      <Icon className="h-6 w-6 fill-zinc-500 transition group-hover:fill-zinc-600 dark:fill-zinc-400 dark:group-hover:fill-zinc-300" />
     </Link>
   )
 }
@@ -178,16 +178,16 @@ function Newsletter() {
     <form
       action="https://formspree.io/f/xwkzgwav"
       method="POST"
-      className="p-6 rounded-2xl border border-zinc-100 dark:border-zinc-700/40"
+      className="rounded-2xl border border-zinc-100 p-6 dark:border-zinc-700/40"
     >
       <h2 className="flex text-sm font-semibold text-zinc-900 dark:text-zinc-100">
-        <MailIcon className="flex-none w-6 h-6" />
+        <MailIcon className="h-6 w-6 flex-none" />
         <span className="ml-3">Stay up to date</span>
       </h2>
       <p className="mt-2 text-sm text-zinc-600 dark:text-zinc-400">
         Get notified when I publish something new, and unsubscribe at any time.
       </p>
-      <div className="flex mt-6">
+      <div className="mt-6 flex">
         <input
           type="email"
           placeholder="Email address"
@@ -195,7 +195,7 @@ function Newsletter() {
           required
           className="min-w-0 flex-auto appearance-none rounded-md border border-zinc-900/10 bg-white px-3 py-[calc(theme(spacing.2)-1px)] shadow-md shadow-zinc-800/5 placeholder:text-zinc-400 focus:border-teal-500 focus:outline-none focus:ring-4 focus:ring-teal-500/10 dark:border-zinc-700 dark:bg-zinc-700/[0.15] dark:text-zinc-200 dark:placeholder:text-zinc-500 dark:focus:border-teal-400 dark:focus:ring-teal-400/10 sm:text-sm"
         />
-        <Button type="submit" className="flex-none ml-4">
+        <Button type="submit" className="ml-4 flex-none">
           Join
         </Button>
       </div>
@@ -235,20 +235,20 @@ function Resume() {
   ]
 
   return (
-    <div className="p-6 rounded-2xl border border-zinc-100 dark:border-zinc-700/40">
+    <div className="rounded-2xl border border-zinc-100 p-6 dark:border-zinc-700/40">
       <h2 className="flex text-sm font-semibold text-zinc-900 dark:text-zinc-100">
-        <BriefcaseIcon className="flex-none w-6 h-6" />
+        <BriefcaseIcon className="h-6 w-6 flex-none" />
         <span className="ml-3">Work</span>
       </h2>
       <ol className="mt-6 space-y-4">
         {resume.map((role, roleIndex) => (
           <li key={roleIndex} className="flex gap-4">
-            <div className="flex relative flex-none justify-center items-center mt-1 w-10 h-10 rounded-full ring-1 shadow-md shadow-zinc-800/5 ring-zinc-900/5 dark:border dark:border-zinc-700/50 dark:bg-zinc-800 dark:ring-0">
-              <Image src={role.logo} alt="" className="w-7 h-7" unoptimized />
+            <div className="relative mt-1 flex h-10 w-10 flex-none items-center justify-center rounded-full shadow-md shadow-zinc-800/5 ring-1 ring-zinc-900/5 dark:border dark:border-zinc-700/50 dark:bg-zinc-800 dark:ring-0">
+              <Image src={role.logo} alt="" className="h-7 w-7" unoptimized />
             </div>
-            <dl className="flex flex-wrap flex-auto gap-x-2">
+            <dl className="flex flex-auto flex-wrap gap-x-2">
               <dt className="sr-only">Company</dt>
-              <dd className="flex-none w-full text-sm font-medium text-zinc-900 dark:text-zinc-100">
+              <dd className="w-full flex-none text-sm font-medium text-zinc-900 dark:text-zinc-100">
                 {role.company}
               </dd>
               <dt className="sr-only">Role</dt>
@@ -278,10 +278,10 @@ function Resume() {
         href="/peter-lloyd-resume.pdf"
         download="peter-lloyd-resume.pdf"
         variant="secondary"
-        className="mt-6 w-full group"
+        className="group mt-6 w-full"
       >
         Download Resume
-        <ArrowDownIcon className="w-4 h-4 transition stroke-zinc-400 group-active:stroke-zinc-600 dark:group-hover:stroke-zinc-50 dark:group-active:stroke-zinc-50" />
+        <ArrowDownIcon className="h-4 w-4 stroke-zinc-400 transition group-active:stroke-zinc-600 dark:group-hover:stroke-zinc-50 dark:group-active:stroke-zinc-50" />
       </Button>
     </div>
   )
@@ -289,9 +289,9 @@ function Resume() {
 
 function PhotographyPromo() {
   return (
-    <div className="p-6 rounded-2xl border border-zinc-100 dark:border-zinc-700/40">
+    <div className="rounded-2xl border border-zinc-100 p-6 dark:border-zinc-700/40">
       <h2 className="flex text-sm font-semibold text-zinc-900 dark:text-zinc-100">
-        <CameraIcon className="flex-none w-6 h-6" />
+        <CameraIcon className="h-6 w-6 flex-none" />
         <span className="ml-3">Photography</span>
       </h2>
       <p className="mt-2 text-sm text-zinc-600 dark:text-zinc-400">
@@ -301,10 +301,10 @@ function PhotographyPromo() {
       <Button
         href="/photography"
         variant="secondary"
-        className="mt-6 w-full group"
+        className="group mt-6 w-full"
       >
         Explore photography
-        <ArrowRightIcon className="w-4 h-4 transition stroke-zinc-400 group-active:stroke-zinc-600 dark:group-hover:stroke-zinc-50 dark:group-active:stroke-zinc-50" />
+        <ArrowRightIcon className="h-4 w-4 stroke-zinc-400 transition group-active:stroke-zinc-600 dark:group-hover:stroke-zinc-50 dark:group-active:stroke-zinc-50" />
       </Button>
     </div>
   )
@@ -315,7 +315,7 @@ function Photos() {
 
   return (
     <div className="mt-16 sm:mt-20">
-      <div className="flex overflow-hidden gap-5 justify-center py-4 -my-4 sm:gap-8">
+      <div className="-my-4 flex justify-center gap-5 overflow-hidden py-4 sm:gap-8">
         {[image1, image2, image3, image4, image5].map((image, imageIndex) => (
           <div
             key={image.src}
@@ -328,7 +328,7 @@ function Photos() {
               src={image}
               alt=""
               sizes="(min-width: 640px) 18rem, 11rem"
-              className="object-cover absolute inset-0 w-full h-full"
+              className="absolute inset-0 h-full w-full object-cover"
             />
           </div>
         ))}
@@ -350,7 +350,7 @@ export default function Home() {
           <div className="my-8">
             <a
               href="https://app.hellobonsai.com/u/observatory/bc70f65f-cc46-4869-9171-b7110b0e5b27"
-              className="inline-flex items-center p-1 pr-2 text-white bg-black rounded-full hover:text-gray-200 sm:text-base lg:text-sm xl:text-base"
+              className="inline-flex items-center rounded-full bg-black p-1 pr-2 text-white hover:text-gray-200 sm:text-base lg:text-sm xl:text-base"
               target="_blank"
               rel="noopener noreferrer"
             >
@@ -364,7 +364,7 @@ export default function Home() {
                 viewBox="0 0 24 24"
                 stroke-width="1.5"
                 stroke="currentColor"
-                className="ml-2 w-5 h-5 text-gray-500"
+                className="ml-2 h-5 w-5 text-gray-500"
               >
                 <path
                   stroke-linecap="round"
@@ -379,16 +379,16 @@ export default function Home() {
           </h1>
           <p className="mt-6 text-lg text-zinc-600 dark:text-zinc-400">
             I’m Peter, a web developer &amp; designer living in Ithaca, New
-            York. I design and code beautifully simple websites. I take{' '}
+            York. I take{' '}
             <a
               href="https://unsplash.com/@plloyd"
               target="_blank"
               rel="noreferrer"
               className="underline decoration-dayAccent underline-offset-2 dark:decoration-nightAccent"
             >
-              photographs
+              photographs,
             </a>{' '}
-            and play{' '}
+            play{' '}
             <a
               href="https://www.instagram.com/replicantnj/"
               target="_blank"
@@ -397,9 +397,18 @@ export default function Home() {
             >
               guitar
             </a>
+            , and own a creative agency called{' '}
+            <a
+              href="https://observatory.team/"
+              target="_blank"
+              rel="noreferrer"
+              className="underline decoration-dayAccent underline-offset-2 dark:decoration-nightAccent"
+            >
+              Observatory
+            </a>
             . I love what I do.
           </p>
-          <div className="flex gap-6 mt-6">
+          <div className="mt-6 flex gap-6">
             <SocialLink
               href="https://twitter.com"
               aria-label="Follow on Twitter"
@@ -425,7 +434,7 @@ export default function Home() {
       </Container>
       <Photos />
       <Container className="mt-24 md:mt-28">
-        <div className="grid grid-cols-1 gap-y-20 mx-auto max-w-xl lg:max-w-none lg:grid-cols-2">
+        <div className="mx-auto grid max-w-xl grid-cols-1 gap-y-20 lg:max-w-none lg:grid-cols-2">
           <div className="flex flex-col gap-16">
             <h2 className="text-base font-semibold tracking-tight text-zinc-800 dark:text-zinc-100">
               Featured clients
@@ -436,10 +445,10 @@ export default function Home() {
             <Button
               href="/clients"
               variant="secondary"
-              className="self-start group"
+              className="group self-start"
             >
               View all clients
-              <ArrowRightIcon className="w-4 h-4 transition stroke-zinc-400 group-active:stroke-zinc-600 dark:group-hover:stroke-zinc-50 dark:group-active:stroke-zinc-50" />
+              <ArrowRightIcon className="h-4 w-4 stroke-zinc-400 transition group-active:stroke-zinc-600 dark:group-hover:stroke-zinc-50 dark:group-active:stroke-zinc-50" />
             </Button>
           </div>
           <div className="space-y-10 lg:pl-16 xl:pl-24">
